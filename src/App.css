@@ -6,9 +6,11 @@ ul.todo-list {
   list-style-type: none;
   padding: 0;
 }
+
 ul.todo-list li {
   margin: 10px 0;
 }
+
 span.complete {
   text-decoration: line-through;
 }
@@ -23,6 +25,7 @@ span.delete-button {
   text-align: center;
   width: 100%;
 }
+
 .form-div input {
   width: 80%;
 }

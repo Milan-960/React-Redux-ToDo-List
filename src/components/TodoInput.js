@@ -2,17 +2,15 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addTodoAction } from "../store/actions/todoActions";
 
-
 const TodoInput = () => {
- 
   const [todo, setTodo] = useState("");
- 
+
   const dispatch = useDispatch();
- 
+
   const onChange = (e) => {
     setTodo(e.target.value);
   };
- 
+
   const onSubmit = (e) => {
     e.preventDefault();
     if (todo.trim() === "") return;
@@ -25,7 +23,7 @@ const TodoInput = () => {
     );
     setTodo("");
   };
-  
+
   return (
     <form onSubmit={onSubmit}>
       <div className="form-div">

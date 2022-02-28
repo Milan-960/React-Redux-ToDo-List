@@ -6,18 +6,17 @@ import {
 } from "../store/actions/todoActions";
 
 const TodoList = () => {
-
   const dispatch = useDispatch();
-  
+
   const todos = useSelector((state) => state.todo.todos);
-  
+
   const toggleTodo = (id) => {
     dispatch(toggleTodoAction(id));
   };
   const deleteTodo = (id) => {
     dispatch(deleteTodoAction(id));
   };
-  
+
   return (
     <ul className="todo-list">
       {todos.map((todo, index) => (
@@ -27,9 +26,7 @@ const TodoList = () => {
             checked={todo.complete}
             onChange={() => toggleTodo(todo.id)}
           />
-          <span className={todo.complete ? "complete" : null}>
-            {todo.name}
-          </span>
+          <span className={todo.complete ? "complete" : null}>{todo.name}</span>
           <span className="delete-button" onClick={() => deleteTodo(todo.id)}>
             X
           </span>
